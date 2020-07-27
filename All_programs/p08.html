@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function duplicate_removal(){
+            var arr=['a','a','a','a','b','c','c','a','a','d','e','e','e','e',];//stored the original array in arr & considered as list
+            //var arr=[1,2,2,3,3,4,4,4,5];
+            var arr1=[]; //This array is taken for adding the distinct elements of the array. 
+            var j=0;      //to iterate the new array i.e arr1 this variable is taken.
+            document.write("Original List:");
+            for(var i=0;i<arr.length;i++){   //this for loop is taken for ietrating through given array
+                    arr[i]=arr[i];
+             }
+                document.write("("+arr+")");  //shown the list
+               for(var i=0;i<arr.length;i++){ //for checking the condition and for pushing the distinct elements into the arr1.
+                if(arr[i]!==arr[i+1]){ // condition is checked if first element of array is not equal to the next element.
+                        arr1[j]=arr[i]; // then assign those elements or push those elements to arr1.
+                        j++; //incremented the second arrays iteration.i.e arr1's iteration
+                    }
+                   
+               } 
+               document.write("<br>"+"After removing duplicates from the List:")
+               document.write("<br>"+"("+arr1+")"); //shown the list    
+            
+            
+              
+        }
+        duplicate_removal();//called the function.
+    </script>
+</body>
+</html>

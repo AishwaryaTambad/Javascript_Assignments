@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          function list(){
+              var q=document.getElementById("d1").value;//taken the lower value
+              var w=document.getElementById("d2").value;//taken the higher value
+              var li=[];//empty array is taken to store the elements
+              document.write("(");
+              for(var i=w;i<=q;i++){// iterating the loop through the given range
+                  li[i]=i;//assiging the values to array
+                document.write(li[i]+",");// printing the array.
+                  
+              }
+              document.write(")");
+               
+          }
+
+          
+    </script>
+    <input id="d1" type="number" placeholder="Enter Upper limit" ><br><br>
+    <input id="d2"type="number" placeholder="Enter Lower limit"><br><br>
+    <button onclick="list()" type="button">Click</button>
+</body>
+</html>

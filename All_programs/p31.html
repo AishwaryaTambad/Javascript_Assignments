@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    function prime(){
+        var s=document.getElementById("f1").value;//getting the value frrom the text box
+        for(var i=2;i<=s;i++){//iterating the loop from 2 to that given value
+            if(s%i==0){// modulus for remainder and if it is 0
+                return "F";// then no is not prime so F
+            }
+            else{
+                return "T";// T means no is prime
+            }
+        }
+    }
+    function check(a,func){//passing the function prime to another function.
+       // document.write(func(a));
+       alert(func(a));
+    }
+    
+    </script>
+
+    <input id= "f1" type="number" placeholder="Enter a number">
+    <br><br>
+    <button onclick="check(2,prime)" type="button">Click to see</button>
+	
+
+</body>
+</html>

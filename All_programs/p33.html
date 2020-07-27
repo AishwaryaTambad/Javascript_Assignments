@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Co_prime(a,b){
+            var temp;//this variable is taken for exchanging the number 
+            document.write("The first no is:"+a);//shown both numbers
+            document.write("<br>"+"The Second no is:"+b);
+            if(b>a){ //checking the condition 
+                temp=b;//assigning the value of b to temp
+                b=a;//again assigning the value of a to b
+                a=temp;// and assinging the temp value's to a so here we are exchanging the numbers
+                }
+                var r=-1;//setting the value of r to -1 to iterate the loop
+                while(r!=0){//iterating the while until r is not equal to 0
+                    r=a%b;// doing the modulus operation of the both numbers to get the remainder
+                    a=b;
+                    b=r;
+
+                }
+                if(a==1){ //checking the condition if factors of the number are equal to 1
+                    document.write("<br>");
+                    
+                   return "T"; 
+                }
+                else{
+                    document.write("<br>");
+                   return "F";
+                }
+
+
+        }
+       var p=Co_prime(2,3);// passing the function to variable(Higher order function concept is used)
+       
+         document.write(p);
+        
+         
+    </script>
+
+   
+</body>
+</html>

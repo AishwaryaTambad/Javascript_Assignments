@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr=[];
+        function find_elements(){
+            var NoOfItems=arr.length;
+           // arr[NoOfItems]=document.getElementById("s1").value;
+                arr[NoOfItems]=prompt("Add elements to list");
+           // document.write("No of elements in an array:"+arr.length);
+           display();
+           
+           
+        }
+        function display(){
+            var n=arr.length;
+            document.getElementById("items").innerHTML="No. of Elements:"+n.toString();
+            
+           
+     }
+     function show(){
+         var n=arr.length;
+        for(var i=0;i<n;i++){
+               arr[i]=arr[i];
+               document.write("["+arr[i]+"]");
+           } 
+     }
+    </script>
+</head>
+<body>
+     <!-- <input id="s1" type="text" placeholder="Add the elements">  -->
+    <br><br>
+   <div id="items"></div>
+    <button onclick="find_elements()" type="button">Click</button>
+    <br><br>
+    <button onclick="show()" type="button">Click to see</button>
+</body>
+</html>

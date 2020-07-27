@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!--Solution to the p02-->
+    <script>
+         //function about getting last element.
+        function last(){
+            var size=document.getElementById("s1").value;//getting the value from the text box
+            var arr=[];
+            for(var i=1;i<size;i++){ //iterating the loop to the size given by user.
+                arr[i]=i;
+                document.write("["+arr[i]+"]");
+               if(arr[i]==(size-1)){ //checking the condition and if(index==indexOflast)
+                   var arr2=[]; //creating the new array
+                   arr2[i]=i; //assign the index to the new array
+                   document.write("<br>"+"Last element:"+arr2[i]); //and show the last element
+               } 
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="s1"  type="number" placeholder="Enter the size of the list">
+    <br><br>
+    <button onclick="last()" type="button">Click to see list</button>
+
+</body>
+</html>

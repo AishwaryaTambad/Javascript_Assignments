@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function remove(){
+          var arr=['a','b','c','d','e','f','g','h','i','k'];//given array considered as list
+          //var arr1=[];
+          var get=document.getElementById("s1").value;  //which element should be removed is taken 
+          for(var i=0;i<arr.length;i++){    // iterating loop upto length
+            if(arr[i]==get){               // checking the condition if array element and given element matches
+                   for(var j=i;j<arr.length-1;j++){     // shifting the elements 
+                          arr[j]=arr[j+1];      //assiging the value at the next index to first i.ei+1 becomes i
+                     
+                    }
+                //  var re=arr.pop(i);
+               //   break;
+              }
+          }
+          document.write("<br>"+"List after removing given element:- ");
+          document.write("(");
+          for(var i=0;i<arr.length-1;i++){   //using for loop for printing the new array which not considers the removed element
+              document.write(arr[i]+",");
+          }
+          document.write(")");
+
+      }
+    </script>
+       <h3>(a','b','c','d','e','f','g','h','i','k')</h3> 
+     <input id="s1" type="text" placeholder="Enter the element to remove">
+     <br><br>
+     <label id="s2" style="visibility: hidden; color: red;" >Enter the element from above list only</label>
+     <br><br>
+     <button type="button" onclick="remove()">Click</button>
+</body>
+</html>

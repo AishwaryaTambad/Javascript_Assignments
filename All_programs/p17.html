@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function split(){
+            var arr=['a','b','c','d','e','f','g','h','i','k'];
+            var getno=document.getElementById("s1").value;
+            var arr2=[];
+            var arr3=[];
+             if(getno>arr.length){
+                var take=document.getElementById("s2");
+                take.style.visibility="visible";
+            }
+            else{
+                for(var i=0;i<arr.length;i++){
+                arr[i]=arr[i];
+            }
+            document.write("("+arr+")"+"<br>");
+            for(var i=0;i<getno;i++){
+                arr2[i]=arr[i];
+            }
+            document.write("("+"("+arr2+")"+"<br>");
+            document.write("(");
+             for(var i=getno;i<arr.length;i++){
+                arr3[i]=arr[i];
+                document.write(arr3[i]+","); 
+             }
+             document.write(")"+")");
+            
+            }
+            
+        }
+    </script>
+</body>
+<h4>['a','b','c','d','e','f','g','h','i','k']</h4>
+<input id="s1" type="number" placeholder="Enter a number to split">
+<br><br>
+<label id="s2" style="visibility: hidden; color: red;" >Can not divide list,index is out of range</label>
+<br><br>
+<button onclick="split()">Click</button>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+        function array(){
+            var lower=document.getElementById("s1").value;//first value is taken
+            var upper=document.getElementById("s2").value;// second value is taken
+            var arr=[];//for storing the values i.e original array
+            var flag;//for setting the value
+            var arr2=[];//for storing the prime values
+            for(var num=lower;num<upper;num++){ // iterating the loop from start number to end
+                arr[num]=num;//assigning the values to first array
+                document.write("["+arr[num]+"]"); //printing the array
+                for(var i=2;i<num;i++){ // iterating through 2 to that number
+                 if(num%i==0){ //performing the mod operation and checking the value
+                    flag=1;  // setting th value of flag as 1 so that we can give condition
+                 break;// breaking the loop 
+                 }
+                 else{
+                     flag=0;// setting the value of flag to zero
+                 }
+                 
+            }
+            if(flag==0){ //if the flag is zero means prime numbers are found
+                
+                var set=2;// prime numbers start from number 2 so declaring the value
+                arr2.push(num);// pushing those prime numbers to second array
+                
+            } 
+            
+            
+             
+         }
+         document.write("Prime numbers list")
+         document.write("<br>"+"["+set+","+arr2+"]"); 
+         
+         
+}
+    
+        
+    </script>
+   <input id="s1" type="number" placeholder="Enter a start number ">
+    <br><br>
+    <input id="s2" type="number" placeholder="Enter a end number">
+    <br><br>
+    <button onclick="array()" type="button">Click to see array</button>
+
+</body>
+</html>

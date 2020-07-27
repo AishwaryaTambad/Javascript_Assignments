@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pali(){
+            var arr=["i","a","m","a","i"];//creating the list and considering it as array.
+            var a=arr[0];//initialize the first element to varible.
+            var b=arr[arr.length-1];//initialize the last element to varible.
+         //checking the condition that first element of list and last element of list are same or not.
+            if(a==b){
+                return "The given list is palindrome";
+            }
+            else{
+                 return "The given list is not palindrome";
+            }
+        } 
+       alert(pali()); //giving the user message that list is palindrome or not through alert.
+    </script>
+</body>
+</html>
