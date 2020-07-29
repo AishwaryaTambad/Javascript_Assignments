@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function goldbach(no){
+            var primearr=[];
+            var c;
+            var ne=0;
+            var flag;
+            for(var n=0;n<50;n++){
+              //c=0;
+              for(var i=2;i<n;i++){
+                  if(n%i==0){
+                      flag=1;
+                      break;
+                  }
+                  else{
+                      flag=0;
+                  }
+                }
+                if(flag==0){
+                    var set=2;
+                      primearr.push(n);
+                  }  
+            }
+            if(no<=9 || no>=50){
+                document.write("Number should be between 0-50")
+            }
+            else if(no%2==1){
+                document.write("Number is odd can not give the result");
+            }
+            else{
+                document.write("Given number is:- "+no+"<br>");
+                document.write("Prime sets are:-"+"<br>");
+                for(var i=0;i<primearr.length;i++){ // this loop is used for iterating the primeno's array
+                    for(var j=i;j<primearr.length;j++){// this loop is used for comparining the two elements from the same array 
+                        var res=primearr[i]+primearr[j];//i.e primearr[3]+primearr[3]=result
+                        if(res==no){ //checking the result with the given number if matches
+                        document.write("("+primearr[i]+","+primearr[j]+")");// prints both numbers
+                        //if not matches then it will go the j's loop and again checks arr[3]+arr[5]=result
+                        //in this way we will get the all sets of sum related to that no.
+                    }
+                    else if(res>no){// if the given no is greater than res than it will break the loop
+                        break;
+                    }
+                }
+                    
+                   
+                }
+            }
+
+        }
+        goldbach(22);
+    </script>
+</body>
+</html>

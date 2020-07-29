@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function insertat(position,given_element){ //function that has two parameters position and element  
+            var arr=['a','b','c','d']; // array which contains original elements
+        //var arr2=[];
+        document.write("Original list:- ");
+        for(var i=1;i<arr.length;i++){ //printing the original array
+            arr[i]=arr[i];
+        }
+        document.write("("+arr+")"+"<br>");
+        document.write("List after inserting given element:- ");
+        document.write("(");
+      //  var j=arr[arr.length];
+        for(var i=arr.length;i>position-1;i--){ // This for loop is used to shift the elements from back side so that a space will be created for new element.
+            arr[i]=arr[i-1]; // assigning the last index element to next index i.e a[4]=a[3];the third index element will be shifted to 4th index
+        }
+        arr[position-1]=given_element; // assigning the given element to the position-1 as the indexing starts from 0
+       
+        for(var i=0;i<arr.length;i++){ //printing the array which consists the given element.
+            document.write(arr[i]+",");
+        }
+       
+    }
+        insertat(3,'alfa');
+        document.write(")");
+    </script>
+</body>
+</html>

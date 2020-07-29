@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function slice(i,k){ // used the function constructor concept.
+            var arr=['a','b','c','d','e','f','g','h','i','k'];// original array
+            var arr2=[];// for storing the sliced elements
+            this.i=i;// this.refers to the particular object. assigning the passed value to this.a
+            this.k=k;//same as per above
+            for(var p=0;p<arr.length;p++){ //iterating this for loop for showing the original array
+                arr[p]=arr[p];
+            }
+            document.write("Original list:- "+"("+arr+")"+"<br>");
+
+            document.write("The sliced list:- "+"(");
+            for(var j=this.i-1;j<this.k+1;j++){ //the start of the array is taken as given index-1 and end is given index+1
+           //because array starts from 0
+                arr2[j]=arr[j];// assigining the values from array1 to array2
+                document.write(arr2[j]+",");
+                
+            }
+            document.write(")");
+        }
+
+       var sl=new slice(3,7) ;// object is created of the function constructor.
+
+      // slice(3,7);
+        
+    </script>
+</body>
+</html>

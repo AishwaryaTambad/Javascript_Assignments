@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverse(){
+            var size=document.getElementById("size").value;//taken the size from the user
+            var arr=[];//first array for storing the original elements
+            var arr2=[];// second array for storing the reversed elements
+            var j=size;// size taken from the user is stored in j variable 
+            for(var i=0;i<size;i++){ // iterating the loop
+                arr[i]=prompt("Enter the elements");// giving the msg to user and storing it in an 1st array
+                arr2[j-1]=arr[i];// the first element of first array will be assigned to the last index of 2nd array
+                j--;// decrementing the second array's iteration
+            }
+           document.write("("+arr+")"+"<br>");//printing the 1st array
+            for(var i=0;i<size;i++){ // printing the second array from its first index
+               arr2[i]=arr2[i];
+           } 
+            document.write("Reversed list:-"+"("+arr2+")");
+        }
+    </script>
+    <input id="size" type="number" placeholder="Enter the size of the list" >
+    <br><br>
+    <button onclick="reverse()">See the list and reversed list </button>
+</body>
+</html>
